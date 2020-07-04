@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>solt</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <counter>
+            <h1>deel</h1>
+        </counter>
+    </div>
+    <script>
+        var counter = {
+            template: `<slot>hello</slot>`,
+        }
+        var app = new Vue({
+            el: '#app',
+            components: {
+                counter: counter
+            }
+        })
+    </script>
+</body>
+
+</html>
